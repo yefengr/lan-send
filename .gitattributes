@@ -1,0 +1,2 @@
+# 文本统一使用 LF，避免跨 Windows 与 Linux 开发时产生换行差异。
+* text=auto eol=lf

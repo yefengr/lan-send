@@ -1,0 +1,29 @@
+# 本机任务、预览和验收产物
+/.pi/tmp/
+/.pi/logs/
+
+# 依赖、构建和测试产物
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+*.log
+
+# 本地配置与凭据
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+auth.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
