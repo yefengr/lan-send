@@ -1,0 +1,21 @@
+{
+  "name": "lan-send",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0 <25" },
+  "workspaces": ["packages/protocol", "apps/server", "apps/web"],
+  "scripts": {
+    "dev": "npm run build --workspace @lan-send/protocol && concurrently -k -n server,web \"npm run dev --workspace @lan-send/server\" \"npm run dev --workspace @lan-send/web\"",
+    "build": "npm run build --workspace @lan-send/protocol && npm run build --workspace @lan-send/server && npm run build --workspace @lan-send/web",
+    "check": "npm run build --workspace @lan-send/protocol && npm run check --workspaces --if-present",
+    "test": "node --conditions=development --import tsx --test packages/protocol/test/*.test.ts apps/server/test/*.test.ts apps/web/src/lib/*.test.ts apps/web/test/*.test.ts",
+    "start": "node --env-file-if-exists=.env apps/server/dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "concurrently": "10.0.7",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
