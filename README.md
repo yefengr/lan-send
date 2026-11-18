@@ -73,3 +73,7 @@ npm start
 - `packages/protocol`：共享消息校验、帧格式和完整性校验链。校验链不是常规整文件 SHA-256。
 - `docs/DESIGN.md`：前端视觉与呈现规则的权威来源。
 - `docs/plans/active/20261117-browser-lan-file-transfer.md`：产品范围、技术方案和后续验收边界。
+
+## 开源许可
+
+本项目采用 [MIT License](LICENSE)。第三方依赖遵循各自的许可证。
